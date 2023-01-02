@@ -1,7 +1,8 @@
 import json
+import os
 
 try:
-    with open('items.json') as file:
+    with open(f"{os.path.realpath(os.path.dirname(__file__))}/items.json") as file:
         items = json.load(file)
 
         input = input("Insert skin name: ").lower()
