@@ -1,5 +1,6 @@
 import json
 import requests
+import os
 
 URL = 'https://zombsroyale.io/api/shop/available'
 request = requests.get(url=URL)
@@ -10,6 +11,6 @@ if response['status'] == "success":
 else:
     print('Something went wrong.')
 
-file = open("items.json", "w")
+file = open(f"{os.path.realpath(os.path.dirname(__file__))}/items.json", "w")
 file.write(json.dumps(response))
 file.close()
