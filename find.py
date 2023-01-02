@@ -16,6 +16,7 @@ try:
         if found == False:
             print('Item not found!')
         elif found == True:
+            results.sort()
             if len(results) == 1:
                 print('<<<',len(results), 'RESULT FOUND >>>')
             else:
