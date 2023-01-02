@@ -4,8 +4,7 @@ try:
     with open('items.json') as file:
         items = json.load(file)
 
-        print('Insert skin name.')
-        input = input().lower()
+        input = input("Insert skin name: ").lower()
         found = False
         results = []
 
