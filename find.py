@@ -1,5 +1,4 @@
-import json
-import os
+import json, os
 
 try:
     with open(f"{os.path.realpath(os.path.dirname(__file__))}/items.json") as file:
