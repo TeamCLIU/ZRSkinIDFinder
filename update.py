@@ -1,6 +1,4 @@
-import json
-import requests
-import os
+import json, requests, os
 
 URL = 'https://zombsroyale.io/api/shop/available'
 request = requests.get(url=URL)
