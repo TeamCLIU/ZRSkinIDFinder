@@ -1,4 +1,5 @@
 import json, os
+from time import *
 
 try:
     with open(f"{os.path.realpath(os.path.dirname(__file__))}/items.json") as file:
@@ -22,6 +23,7 @@ try:
             else:
                 print('<<<',len(results), 'RESULTS FOUND >>>')
             for result in results:
-                print(str(result[1]).rjust(5, '0'), ':', result[0])
+                print(result[1], ':', result[0])
 except FileNotFoundError:
     print("items.json file does not exist! Run update.py!")
+sleep(120)
